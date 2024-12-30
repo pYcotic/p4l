@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "T-Shirt",
+    "description": "A comfortable and stylish T-shirt",
+    "image": "images/tshirt.jpg",
+    "price": 19.99
+  },
+  {
+    "id": 2,
+    "name": "Coffee Mug",
+    "description": "The perfect mug for your morning coffee",
+    "image": "images/coffeemug.jpg",
+    "price": 9.99
+  },
+  {
+    "id": 3,
+    "name": "Wireless Headphones",
+    "description": "Listen to your music wirelessly",
+    "image": "images/headphones.jpg",
+    "price": 79.99
+  }
+]
