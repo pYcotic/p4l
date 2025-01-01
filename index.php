@@ -1,36 +1,16 @@
-<?php
-	$jsonData = file_get_contents('db/products.json');
-	try {
-		$products = json_decode($jsonData, true);
-		if ($products === null) {
-			throw new Exception("Failed to load JSON");
-		}
-	} catch (Exception $e) {
-		echo "Error decoding JSON: " . $e->getMessage();
-	}
-?>
-
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>P4L - code test</title>
-		<link rel="stylesheet" typr="text/css" href="Assets/css/styles.css">
-	</head>
+	<?php include './Assets/php/head/head.php'; ?>
 	<body>
-		<?php
-			foreach ($products as $product) {
-				echo "<div id=" . $product['id'] . " class='product'>";
-				echo "<img src='Assets/" . $product['image'] . "' alt='" . $product['description'] . "' class='product_img'>";
-				echo "<h2 class='product_name'>" . $product['name'] . "</h2>";
-				echo "<p class='product_desc'>" . $product['description'] . "</p>";
-				echo "<p class='producr_price'>R " . $product['price'] . "</p>";
-				echo "</div>";
-				echo "<div class='button_div'>";
-				echo "<button class='button_add_to_cart'>Add to cart</button>";
-				echo "<button class='button_buy_now'>Buy Now!</button>";
-				echo "</div>";
-			}
-		?>
+	<?php include './Assets/php/navbar/navbar.php'; ?>
+		<h2> Hi, and welcome to my product page </h2>
+		<p>Browse around and find all the tasks that are completed</p>
+		<ol>
+			<li>To create - Go to add product in the navbar</li>
+			<li>To Read go to products and see all products read from the database</li>
+			<li>To Update select a product from the products page and then press the update button</li>
+			<li>To Delete an item do the sameas above but instead of update press the delete button</li>
+		</ol>
 	</body>
 </html>
 
